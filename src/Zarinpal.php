@@ -49,7 +49,7 @@ class Zarinpal
             $inputs['Mobile'] = $Mobile;
         }
         if (!is_null($additionalData)) {
-            $inputs['AdditionalData'] = $additionalData;
+            $inputs['AdditionalData'] = json_encode($additionalData);
             $results = $this->driver->requestWithExtra($inputs);
         } else {
             $results = $this->driver->request($inputs);
